@@ -2,4 +2,6 @@
   home works!
 </p>
 
-<app-car-box [car]="civie"></app-car-box>
+<app-car-box 
+  *ngFor="let car of carList" 
+  [car]="car"></app-car-box>

@@ -12,7 +12,7 @@ export class Car {
     }
 
     public changePrice(newPrice):void {
-        this.price = newPrice
+        this.price = newPrice;
     }
 
 }

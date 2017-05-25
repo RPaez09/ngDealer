@@ -8,11 +8,11 @@ import { Car } from 'app/models/Car.model';
 })
 export class HomeComponent implements OnInit {
 
-  civie: Car;
+  carList: Array<Car>;
 
   constructor() { 
-    this.civie = new Car({"make": "Honda", "model": "Civic", "year": 2004, "price": 9000});
-  }
+    this.carList = [new Car( {"make": "Honda", "model": "Civic", "year": 2004, "price": 9000} ),
+                    new Car( {"make": "Toyota", "model": "Camry", "year": 1997, "price": 14000} ) ]; }
 
   ngOnInit() {
   }
