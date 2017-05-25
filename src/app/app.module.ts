@@ -7,6 +7,7 @@ import { RouterModule , Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { CarBoxComponent } from './components/car-box/car-box.component';
 
 
 const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
   declarations: [
     AppComponent, 
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    CarBoxComponent
   ],
   imports: [
     BrowserModule,
