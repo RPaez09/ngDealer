@@ -13,11 +13,7 @@ export class HomeComponent implements OnInit {
 
   carList: Array<Car>;
 
-  constructor(private carService: CarService) { 
-
-
-    this.carList = [new Car( {"make": "Honda", "model": "Civic", "year": 2004, "price": 9000} ),
-                    new Car( {"make": "Toyota", "model": "Camry", "year": 1997, "price": 14000} ) ]; }
+  constructor(private carService: CarService) { }
 
   ngOnInit() {
     this.carService.getAllCars()
