@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CarBoxComponent } from './components/car-box/car-box.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { CarTableComponent } from './components/admin/car-table/car-table.component';
 
 
 const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
     HomeComponent,
     AboutComponent,
     CarBoxComponent,
-    AdminComponent
+    AdminComponent,
+    CarTableComponent
   ],
   imports: [
     BrowserModule,
