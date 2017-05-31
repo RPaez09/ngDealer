@@ -15,4 +15,10 @@ export class CarService {
     return this._http.get('http://localhost:3000/Cars')
       .map(res => res.json());
   }
+
+  deleteCar(id: string){
+    return this._http.delete('http://localhost:3000/cars/'+ id)
+      .map(res => res.json());
+  }
+
 }

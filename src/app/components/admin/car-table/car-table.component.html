@@ -15,7 +15,7 @@
         <td>{{car.make}}</td>
         <td>{{car.model}}</td>
         <td>{{car.year}}</td>
-        <td><div class="btn btn-danger">Delete</div></td>
+        <td><button (click)="deleteCar(car._id)" class="btn btn-danger">Delete</button></td>
       </tr>
     </tbody>
   </table>
