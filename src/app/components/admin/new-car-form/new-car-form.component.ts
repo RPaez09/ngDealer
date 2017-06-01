@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'new-car-form',
@@ -9,13 +9,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class NewCarFormComponent implements OnInit {
 
   newCarForm: FormGroup;
+  make: AbstractControl;
+  model: AbstractControl;
+  year: AbstractControl;
 
   constructor(fb: FormBuilder) {
+    
     this.newCarForm = fb.group({
-      'make': ['ABC123'],
-      'model': ['ABC123'],
-      'year': ['ABC123']
+      'make': ['', Validators.required ],
+      'model': ['', Validators.required ],
+      'year': ['', Validators.required ]
     });
+
+    this.make = this.newCarForm.controls['make'];
+    this.model = this.newCarForm.controls['model'];
+    this.year = this.newCarForm.controls['year'];
+
    }
 
   ngOnInit() {
