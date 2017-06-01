@@ -16,6 +16,11 @@ export class CarService {
       .map(res => res.json());
   }
 
+  addCar(car : Object){
+    return this._http.post('http://localhost:3000/Cars', car)
+      .map(res => res.json());
+  }
+
   deleteCar(id: string){
     return this._http.delete('http://localhost:3000/cars/'+ id)
       .map(res => res.json());
