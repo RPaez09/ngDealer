@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule , Routes } from '@angular/router';
 
@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CarBoxComponent } from './components/car-box/car-box.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { CarTableComponent } from './components/admin/car-table/car-table.component';
+import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 
 
 const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,11 +25,13 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
     AboutComponent,
     CarBoxComponent,
     AdminComponent,
-    CarTableComponent
+    CarTableComponent,
+    NewCarFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
   ],
