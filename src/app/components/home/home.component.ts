@@ -32,8 +32,7 @@ export class HomeComponent implements OnInit {
     this.carService.getAllCars()
       .subscribe(
         data => this.store.dispatch( new CarActions.GetAllCarsSuccess( data ) ),
-        error => console.error(error),
-        () => console.log('Requested')
+        error => console.error(error)
       );
   }
 

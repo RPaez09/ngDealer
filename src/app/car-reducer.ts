@@ -20,6 +20,14 @@ export function reducer( state = initialState, action: CarActions.All ): State {
             return  { ...state , Cars: action.payload };
         }
 
+        case CarActions.DELETECAR: {
+            return state;
+        }
+
+        case CarActions.DELETECARSUCCESS: {
+            return { ...state , Cars: ( state.Cars.filter( car => car._id !== action.payload._id ) )  };
+        }
+
         default: { return state; }
     }
  }
