@@ -1,3 +1,3 @@
 <app-car-box 
-  *ngFor="let car of carList" 
+  *ngFor="let car of carList | async" 
   [car]="car"></app-car-box>

@@ -12,6 +12,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { CarTableComponent } from './components/admin/car-table/car-table.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './reducers';
 
 const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
                           { path: 'home', component: HomeComponent },
@@ -33,7 +35,8 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    StoreModule.provideStore(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
