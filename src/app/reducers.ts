@@ -7,3 +7,7 @@ export interface State {
 export const reducers = {
     cars: fromCars.reducer
 };
+
+export function selectCars( state: State ) {
+    return state.cars.Cars;
+}
