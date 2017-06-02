@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { CarService } from "app/services/car-service.service";
 
+import { Store } from '@ngrx/store';
+import * as CarActions from 'app/car-actions';
+import * as fromCars from 'app/reducers'; 
+
 @Component({
   selector: 'new-car-form',
   templateUrl: './new-car-form.component.html',
@@ -15,8 +19,12 @@ export class NewCarFormComponent implements OnInit {
   model: AbstractControl;
   year: AbstractControl;
 
-  constructor(fb: FormBuilder , private carService: CarService) {
-    
+  constructor(
+    fb: FormBuilder , 
+    private carService: CarService,
+    private store: Store<fromCars.State> )
+    {
+
     this.newCarForm = fb.group({
       'make': ['', Validators.required ],
       'model': ['', Validators.required ],
@@ -33,7 +41,6 @@ export class NewCarFormComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    console.log(form);
 
     let newCar = {
       make: form.make,
@@ -41,9 +48,11 @@ export class NewCarFormComponent implements OnInit {
       year: parseInt(form.year)
     };
 
+    this.store.dispatch( new CarActions.CreateCar() );
+
     this.carService.addCar(newCar)
       .subscribe(
-        data => console.log(data),
+        data => this.store.dispatch( new CarActions.CreateCarSuccess(data) ),
         error => console.log(error) );
     
     this.newCarForm.reset();

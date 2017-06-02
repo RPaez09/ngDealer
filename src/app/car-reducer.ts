@@ -20,6 +20,14 @@ export function reducer( state = initialState, action: CarActions.All ): State {
             return  { ...state , Cars: action.payload };
         }
 
+        case CarActions.CREATECAR: {
+            return state;
+        }
+
+        case CarActions.CREATECARSUCCESS: {
+            return { ...state , Cars: ( state.Cars.concat(action.payload) ) };
+        }
+
         case CarActions.DELETECAR: {
             return state;
         }
