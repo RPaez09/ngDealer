@@ -1,23 +1,23 @@
-<div class="col-md-12">
+<div class="manage-cars">
   <h2>Manage Cars</h2>
-  <table class="table table-condensed">
-    <thead>
-      <tr>
-        <th>Unique ID</th>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Year</th>
-        <td></td>
-      </tr>
-    </thead>
-    <tbody> 
-      <tr *ngFor="let car of carList | async">
-        <td>{{car._id}}</td>
-        <td>{{car.make}}</td>
-        <td>{{car.model}}</td>
-        <td>{{car.year}}</td>
-        <td><button (click)="deleteCar(car._id)" class="btn btn-danger">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Id</th>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr *ngFor="let car of carList | async">
+          <td>{{car.year}}</td>
+          <td>{{car.make}}</td>
+          <td>{{car.model}}</td>
+          <td>{{car._id}}</td>
+          <td><button (click)="deleteCar(car._id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { CarService } from "app/services/car-service.service";
 
@@ -13,6 +13,7 @@ import * as fromCars from 'app/reducers';
   providers: [CarService]
 })
 export class NewCarFormComponent implements OnInit {
+  @HostBinding('attr.class') cssClass = 'col-md-12';
 
   newCarForm: FormGroup;
   make: AbstractControl;

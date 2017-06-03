@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Car } from "app/models/Car.model";
 import { CarService } from "app/services/car-service.service";
 import { Observable } from 'rxjs/Observable';
@@ -15,7 +15,8 @@ import * as fromCars from 'app/reducers';
   providers: [CarService]
 })
 export class CarTableComponent implements OnInit {
-  
+  @HostBinding('attr.class') cssClass = 'col-md-12';
+
   carList: Observable<Array<Car>>;
 
   deleteCar(id:string):void {
