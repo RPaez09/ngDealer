@@ -1,7 +1,9 @@
 .car-box {
     font-family: "Arial";
     background-color: #fbfbfb;
-    padding: 15px;
+    padding: 15px 35px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: 30px;
 }
 
 .car-box p {

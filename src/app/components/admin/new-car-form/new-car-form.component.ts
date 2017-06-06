@@ -42,21 +42,25 @@ export class NewCarFormComponent implements OnInit {
   }
 
   onSubmit(form: any) {
+    if(this.newCarForm.valid){
+      let newCar = {
+        make: form.make,
+        model: form.model,
+        year: parseInt(form.year)
+      };
 
-    let newCar = {
-      make: form.make,
-      model: form.model,
-      year: parseInt(form.year)
-    };
+      this.store.dispatch( new CarActions.CreateCar() );
 
-    this.store.dispatch( new CarActions.CreateCar() );
-
-    this.carService.addCar(newCar)
-      .subscribe(
-        data => this.store.dispatch( new CarActions.CreateCarSuccess(data) ),
-        error => console.log(error) );
-    
-    this.newCarForm.reset();
+      this.carService.addCar(newCar)
+        .subscribe(
+          data => this.store.dispatch( new CarActions.CreateCarSuccess(data) ),
+          error => console.log(error) );
+      
+      this.newCarForm.reset();
+    }
+    else {
+      alert("Please check your form");
+    }
   }
 
 }
