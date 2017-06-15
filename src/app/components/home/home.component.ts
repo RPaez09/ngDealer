@@ -27,13 +27,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     
-    this.store.dispatch( new CarActions.GetAllCars() )
-
-    this.carService.getAllCars()
-      .subscribe(
-        data => this.store.dispatch( new CarActions.GetAllCarsSuccess( data ) ),
-        error => console.error(error)
-      );
   }
 
 }
