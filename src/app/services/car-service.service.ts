@@ -11,6 +11,11 @@ export class CarService {
 
   constructor( private _http: Http ) { }
 
+  getACar(carId: string){
+    return this._http.get('http://localhost:3000/Cars/' + carId)
+      .map(res => res.json());
+  }
+
   getAllCars(){
     return this._http.get('http://localhost:3000/Cars')
       .map(res => res.json());

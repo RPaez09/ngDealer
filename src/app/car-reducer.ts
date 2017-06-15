@@ -2,15 +2,25 @@ import { Car } from 'app/models/car.model';
 import * as CarActions from "app/car-actions";
 
 export interface State {
-    Cars : Array<Car>
+    Cars : Array<Car>,
+    SelectedCar : Car
 }
 
 const initialState: State = {
-    Cars: []
+    Cars: [],
+    SelectedCar: null
 };
 
 export function reducer( state = initialState, action: CarActions.All ): State { 
     switch (action.type) {
+
+        case CarActions.GETACAR: {
+            return state;
+        }
+
+        case CarActions.GETACARSUCCESS: {
+            return { ...state , SelectedCar: action.payload };
+        }
 
         case CarActions.GETALLCARS: {
             return  state;

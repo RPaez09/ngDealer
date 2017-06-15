@@ -10,6 +10,21 @@ export const CREATECARSUCCESS = "[Cars] Create a car success";
 export const DELETECAR = "[Cars] Delete a car";
 export const DELETECARSUCCESS = "[Cars] Delete a car success";
 
+export const GETACAR = "[Cars] Get a car";
+export const GETACARSUCCESS = "[Cars] Get a car success";
+
+export class GetACar implements Action {
+    readonly type = GETACAR;
+
+    constructor( ) { }
+}
+
+export class GetACarSuccess implements Action {
+    readonly type = GETACARSUCCESS;
+
+    constructor( public payload: Car ) { }
+}
+
 export class GetAllCars implements Action {
     readonly type = GETALLCARS;
 
@@ -42,7 +57,9 @@ export class DeleteCarSuccess implements Action {
 }
 
 export type All
-    = GetAllCars
+    = GetACar
+    | GetACarSuccess
+    | GetAllCars
     | GetAllCarsSuccess
     | CreateCar
     | CreateCarSuccess

@@ -11,3 +11,7 @@ export const reducers = {
 export function selectCars( state: State ) {
     return state.cars.Cars;
 }
+
+export function selectCar( state: State ) {
+    return state.cars.SelectedCar
+}
