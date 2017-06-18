@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     private store: Store<fromCars.State> ) 
     { 
       this.carList = store.select( fromCars.selectCars );
-     }
+    }
 
   ngOnInit() {
     

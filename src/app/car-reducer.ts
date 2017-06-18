@@ -3,12 +3,11 @@ import * as CarActions from "app/car-actions";
 
 export interface State {
     Cars : Array<Car>,
-    SelectedCar : Car
+    SelectedCar?: Car
 }
 
 const initialState: State = {
-    Cars: [],
-    SelectedCar: null
+    Cars: []
 };
 
 export function reducer( state = initialState, action: CarActions.All ): State { 

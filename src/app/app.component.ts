@@ -18,8 +18,8 @@ import * as fromCars from 'app/reducers';
 export class AppComponent {
   constructor( private router: Router,
                private carService: CarService,
-               private store: Store<fromCars.State>  ){
-
+               private store: Store<fromCars.State>  )
+    {
       this.store.dispatch( new CarActions.GetAllCars() )
 
       this.carService.getAllCars()
@@ -27,5 +27,5 @@ export class AppComponent {
           data => this.store.dispatch( new CarActions.GetAllCarsSuccess( data ) ),
           error => console.error(error)
       );
-   };
+    };
 }
