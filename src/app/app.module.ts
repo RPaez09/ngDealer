@@ -22,7 +22,9 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
                           { path: 'about', component: AboutComponent },
                           { path: 'admin', component: AdminComponent,
                               children: [
-                                { path: 'edit', component: EditCarFormComponent }
+                                { path: '', component: CarTableComponent },
+                                { path: 'edit', component: EditCarFormComponent },
+                                { path: 'new', component: NewCarFormComponent }
                               ] 
                             },
                           { path: 'car', redirectTo: 'home' },
