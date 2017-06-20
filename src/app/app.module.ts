@@ -12,17 +12,23 @@ import { CarBoxComponent } from './components/car-box/car-box.component';
 import { CarTableComponent } from './components/admin/car-table/car-table.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { DetailCarComponent } from './components/detail/detail-car/detail-car.component';
+import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-form.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 
 import { reducers } from './reducers';
 
 const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
-                          { path: 'home', component: HomeComponent },
                           { path: 'about', component: AboutComponent },
-                          { path: 'admin', component: AdminComponent },
+                          { path: 'admin', component: AdminComponent,
+                              children: [
+                                { path: 'edit', component: EditCarFormComponent }
+                              ] 
+                            },
                           { path: 'car', redirectTo: 'home' },
-                          { path: 'car/:id', component: DetailComponent } ];
+                          { path: 'car/:id', component: DetailComponent },
+                          { path: 'home', component: HomeComponent } 
+                      ];
 
 @NgModule({
   declarations: [
@@ -34,7 +40,8 @@ const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
     CarTableComponent,
     NewCarFormComponent,
     DetailComponent,
-    DetailCarComponent
+    DetailCarComponent,
+    EditCarFormComponent
   ],
   imports: [
     BrowserModule,
