@@ -18,19 +18,21 @@ import { NewCarFormComponent } from './components/admin/new-car-form/new-car-for
 
 import { reducers } from './reducers';
 
-const routes: Routes = [  { path: '', redirectTo: 'home', pathMatch: 'full' },
-                          { path: 'about', component: AboutComponent },
-                          { path: 'admin', component: AdminComponent,
-                              children: [
-                                { path: '', component: CarTableComponent },
-                                { path: 'edit', component: EditCarFormComponent },
-                                { path: 'new', component: NewCarFormComponent }
-                              ] 
-                            },
-                          { path: 'car', redirectTo: 'home' },
-                          { path: 'car/:id', component: DetailComponent },
-                          { path: 'home', component: HomeComponent } 
-                      ];
+const routes: Routes = 
+[  
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'about', component: AboutComponent },
+  { path: 'admin', component: AdminComponent,
+      children: [
+        { path: '', component: CarTableComponent },
+        { path: 'edit', component: EditCarFormComponent },
+        { path: 'new', component: NewCarFormComponent }
+      ] 
+    },
+  { path: 'car', redirectTo: 'home' },
+  { path: 'car/:id', component: DetailComponent },
+  { path: 'home', component: HomeComponent } 
+];
 
 @NgModule({
   declarations: [
