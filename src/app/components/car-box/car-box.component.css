@@ -1,14 +1,18 @@
 .car-box {
     font-family: "Arial";
-    background-color: #fbfbfb;
-    padding: 15px 35px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    margin-bottom: 30px;
+    background-color: #fefefe;
+    padding: 30px 35px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: 80px;
     min-height: 250px
 }
 
 .car-box p {
-    font-size: 20px;
+    font-size: 24px;
+}
+
+.car-box a {
+    color: #000000;
 }
 
 .car-box a:hover {
