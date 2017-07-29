@@ -13,6 +13,7 @@
 
 .car-box a {
     color: #000000;
+    display: inline-block;
 }
 
 .car-box a:hover {
