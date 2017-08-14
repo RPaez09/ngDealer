@@ -40,30 +40,30 @@ const routes: Routes =
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    HomeComponent,
     AboutComponent,
-    CarBoxComponent,
     AdminComponent,
+    AppComponent, 
+    CarBoxComponent,
     CarTableComponent,
-    NewCarFormComponent,
-    DetailComponent,
     DetailCarComponent,
-    EditCarFormComponent
+    DetailComponent,
+    EditCarFormComponent,
+    HomeComponent,
+    NewCarFormComponent
   ],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(routes),
-    StoreModule.provideStore(reducers),
     MdButtonModule,
-    MdMenuModule,
     MdCardModule,
+    MdIconModule,
+    MdMenuModule,
     MdToolbarModule,
-    MdIconModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    StoreModule.provideStore(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
