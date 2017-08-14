@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
@@ -18,6 +17,10 @@ import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 
 import { reducers } from './reducers';
+
+//Material dependencies
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 const routes: Routes = 
 [  
@@ -55,7 +58,12 @@ const routes: Routes =
     ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    StoreModule.provideStore(reducers)
+    StoreModule.provideStore(reducers),
+    MdButtonModule,
+    MdMenuModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
