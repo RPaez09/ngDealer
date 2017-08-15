@@ -28,6 +28,43 @@
               name="year" 
               ngModel>
       <div class="error-lbl" *ngIf="!year.valid && year.touched">A vehicle year is required</div>
+
+      <input  type="text" 
+              [formControl]="newCarForm.controls['price']"
+              class="form-control"
+              id="priceInput"
+              placeholder="Price"
+              name="price" 
+              ngModel>
+      <div class="error-lbl" *ngIf="!price.valid && price.touched">Vehicle price is required</div>
+
+      <input  type="text" 
+              [formControl]="newCarForm.controls['mileage']"
+              class="form-control"
+              id="mileageInput"
+              placeholder="Mileage"
+              name="mileage" 
+              ngModel>
+      <div class="error-lbl" *ngIf="!mileage.valid && mileage.touched">Vehicle mileage is required</div>
+
+      <input  type="text" 
+              [formControl]="newCarForm.controls['color']"
+              class="form-control"
+              id="colorInput"
+              placeholder="Color"
+              name="color" 
+              ngModel>
+      <div class="error-lbl" *ngIf="!color.valid && color.touched">A vehicle color is required</div>
+
+      <input  type="text" 
+              [formControl]="newCarForm.controls['trim']"
+              class="form-control"
+              id="trimInput"
+              placeholder="Trim"
+              name="trim" 
+              ngModel>
+      <div class="error-lbl" *ngIf="!trim.valid && trim.touched">A vehicle trim is required</div>
+
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
     <a [routerLink]="['/admin']" class="btn btn-danger">Cancel</a>

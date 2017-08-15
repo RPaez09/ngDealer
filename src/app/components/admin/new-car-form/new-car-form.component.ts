@@ -19,22 +19,34 @@ export class NewCarFormComponent implements OnInit {
   make: AbstractControl;
   model: AbstractControl;
   year: AbstractControl;
+  price: AbstractControl;
+  mileage: AbstractControl;
+  color: AbstractControl;
+  trim: AbstractControl;
 
   constructor(
-    fb: FormBuilder , 
+    fb: FormBuilder, 
     private carService: CarService,
     private store: Store<fromCars.State> )
     {
 
     this.newCarForm = fb.group({
-      'make': ['', Validators.required ],
-      'model': ['', Validators.required ],
-      'year': ['', Validators.required ]
+      'make': ['', Validators.required],
+      'model': ['', Validators.required],
+      'year': ['', Validators.required],
+      'price' : ['', Validators.required],
+      'mileage' : ['', Validators.required],
+      'color' : ['', Validators.required],
+      'trim' : ['', Validators.required]
     });
 
     this.make = this.newCarForm.controls['make'];
     this.model = this.newCarForm.controls['model'];
     this.year = this.newCarForm.controls['year'];
+    this.price = this.newCarForm.controls['price'];
+    this.mileage = this.newCarForm.controls['mileage'];
+    this.color = this.newCarForm.controls['color'];
+    this.trim = this.newCarForm.controls['trim'];
 
    }
 
@@ -46,7 +58,11 @@ export class NewCarFormComponent implements OnInit {
       let newCar = {
         make: form.make,
         model: form.model,
-        year: parseInt(form.year)
+        year: parseInt(form.year),
+        price: parseInt(form.price),
+        mileage: parseInt(form.mileage),
+        color: form.color,
+        trim: form.trim
       };
 
       this.store.dispatch( new CarActions.CreateCar() );
