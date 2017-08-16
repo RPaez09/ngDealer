@@ -28,9 +28,5 @@ export class Car {
         this.hidden = hidden;
         this._id = _id;
     }
-
-    public changePrice(newPrice):void {
-        this.price = newPrice;
-    }
-
+    
 }
