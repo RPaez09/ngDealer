@@ -19,3 +19,7 @@
 .car-box a:hover {
     text-decoration: none;
 }
+
+.car-box p.mileage {
+    font-size: 22px
+}

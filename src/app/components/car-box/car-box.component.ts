@@ -8,8 +8,10 @@ import { Car } from "app/models/Car.model";
 })
 export class CarBoxComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'col-md-12';
+  
   @Input() car: Car;
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
 
