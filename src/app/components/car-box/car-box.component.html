@@ -3,5 +3,5 @@
     <p><strong>{{car.year}} {{car.make}} {{car.model}} {{car.trim}}</strong></p>
   </a>
     <p class="mileage">{{car.mileage}} Miles</p>
-    <p class="price">${{car.price}}</p>
+    <p class="price">{{car.price | currency:'USD':true }}</p>
 </div>
