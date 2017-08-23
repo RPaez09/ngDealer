@@ -1,4 +1,16 @@
-export class Car {
+export interface ICar {
+    make: string;
+    model: string;
+    year: number;
+    price: number;
+    mileage: number;
+    color: string;
+    trim: string;
+    hidden: boolean;
+    _id: string;
+}
+
+export class Car implements ICar{
     make: string;
     model: string;
     year: number;
