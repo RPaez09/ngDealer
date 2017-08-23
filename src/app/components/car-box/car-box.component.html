@@ -2,6 +2,6 @@
   <a [routerLink]="['/car/' + car._id]">
     <p><strong>{{car.year}} {{car.make}} {{car.model}} {{car.trim}}</strong></p>
   </a>
-    <p class="mileage">{{car.mileage}} Miles</p>
-    <p class="price">{{car.price | currency:'USD':true }}</p>
+    <p class="mileage">{{car.mileage | number}} Miles</p>
+    <p class="price">${{car.price | number }}</p>
 </div>
