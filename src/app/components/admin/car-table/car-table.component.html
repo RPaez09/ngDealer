@@ -1,5 +1,6 @@
 <div class="manage-cars">
   <h2>Manage Cars</h2>
+    <a [routerLink]="['/admin/new']" class="btn btn-primary newCarButton">New car</a>
     <table class="table table-condensed">
       <thead>
         <tr>
@@ -16,9 +17,8 @@
           <td>{{car.make}}</td>
           <td>{{car.model}}</td>
           <td>{{car._id}}</td>
-          <td><button (click)="deleteCar(car._id)" class="btn btn-danger">Delete</button></td>
+          <td><button (click)="deleteCar(car._id)" class="btn btn-danger delete-btn">Delete</button></td>
         </tr>
       </tbody>
     </table>
-    <a [routerLink]="['/admin/new']" class="btn btn-success newCarButton">New car</a>
   </div>
