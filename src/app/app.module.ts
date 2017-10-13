@@ -13,6 +13,7 @@ import { CarTableComponent } from './components/admin/car-table/car-table.compon
 import { DetailComponent } from './components/detail/detail.component';
 import { DetailCarComponent } from './components/detail/detail-car/detail-car.component';
 import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-form.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 
@@ -48,6 +49,7 @@ const routes: Routes =
     DetailCarComponent,
     DetailComponent,
     EditCarFormComponent,
+    FooterComponent,
     HomeComponent,
     NewCarFormComponent
   ],
