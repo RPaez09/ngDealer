@@ -1,9 +1,9 @@
 .car-box {
     font-family: "Arial";
     background-color: #fefefe;
-    padding: 30px 35px;
+    padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     min-height: 250px
 }
 
@@ -16,10 +16,27 @@
     display: inline-block;
 }
 
+.car-box a:hover{
+    cursor: default;
+}
+
 .car-box a:hover {
     text-decoration: none;
 }
 
 .car-box p.mileage {
     font-size: 22px
+}
+
+.imagePlaceholder {
+    background-color: grey;
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.car-detail {
+    display: inline-block;
+    vertical-align: top;
 }

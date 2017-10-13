@@ -1,7 +1,10 @@
 <div class="car-box">
   <a [routerLink]="['/car/' + car._id]">
+  <div class="imagePlaceholder"></div>
+  <div class="car-detail">
     <p><strong>{{car.year}} {{car.make}} {{car.model}} {{car.trim}}</strong></p>
-  </a>
     <p class="mileage">{{car.mileage | number}} Miles</p>
     <p class="price">${{car.price | number }}</p>
+    </div>
+  </a>
 </div>
