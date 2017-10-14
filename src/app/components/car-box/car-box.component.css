@@ -1,11 +1,11 @@
 .car-box {
     font-family: "Arial";
-    background-color: #fefefe;
-    padding: 30px;
+    background-color: #fff;
+    padding: 0;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.2s ease-in-out;
-    margin-bottom: 30px;
-    min-height: 250px
+    margin-bottom: 25px;
+    height: 230px
 }
 
 .car-box:hover{
@@ -35,8 +35,8 @@
 
 .imagePlaceholder {
     background-color: grey;
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 230px;
     display: inline-block;
     margin-right: 30px;
 }
@@ -44,4 +44,5 @@
 .car-detail {
     display: inline-block;
     vertical-align: top;
+    margin-top: 25px;
 }
