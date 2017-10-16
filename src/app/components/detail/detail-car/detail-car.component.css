@@ -6,13 +6,6 @@
     position: relative;
 }
 
-h2 {
-    padding: 25px 35px;
-    background-color: #337ab7;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
 
 a {
     line-height: 35px;
@@ -22,4 +15,27 @@ a {
     font-weight: bold;
     border-radius: 0;
     position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+h2 {
+    padding: 25px 35px;
+    background-color: #337ab7;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h3 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.placeholder{
+    display: inline-block;
+    height: 400px;
+    width: 650px;
+    background-color: grey;
+    margin: 15px 35px;
 }
