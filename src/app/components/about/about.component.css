@@ -1,0 +1,15 @@
+.about-main{
+    background-color: #fbfbfb;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 0 0 95px 0;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+h2 {
+    padding: 25px 35px;
+    background-color: #337ab7;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
