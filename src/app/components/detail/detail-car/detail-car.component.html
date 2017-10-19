@@ -1,8 +1,8 @@
 <div class="detail-main">
     <h2>Car Details</h2>
     <div class="placeholder"></div>    
-<h3>{{car?.year}}<br/>
-    {{car?.make}}<br/>
-    {{car?.model}}<br/></h3>
+<h3><span class="price">${{car?.price | number}}</span><br/>
+    <br />{{car?.year}} {{car?.make}} {{car?.model}} {{car?.trim}}<br/>
+    {{car?.mileage | number}} Miles</h3>
 <a class ="btn btn-primary" [routerLink]="['/home']">Back to home</a>
 </div>

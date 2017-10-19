@@ -32,6 +32,11 @@ h3 {
     vertical-align: top;
 }
 
+span.price {
+    color: #337ab7;
+    font-size: 30px;
+}
+
 .placeholder{
     display: inline-block;
     height: 400px;
