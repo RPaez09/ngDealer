@@ -37,7 +37,7 @@ export class NewCarFormComponent implements OnInit {
       'price' : ['', Validators.required],
       'mileage' : ['', Validators.required],
       'color' : ['', Validators.required],
-      'trim' : ['', Validators.required]
+      'trim' : ['']
     });
 
     this.make = this.newCarForm.controls['make'];
