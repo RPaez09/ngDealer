@@ -7,6 +7,7 @@ export interface ICar {
     color: string;
     trim: string;
     hidden: boolean;
+    description: string;
     _id: string;
 }
 
@@ -19,6 +20,7 @@ export class Car implements ICar{
     color: string;
     trim: string;
     hidden: boolean;
+    description: string;
     _id: string;
 
     constructor( {  "make": make, 
@@ -29,6 +31,7 @@ export class Car implements ICar{
                     "color": color,
                     "trim":trim,
                     "hidden": hidden,
+                    "description": description,
                     "_id": _id } ) {
         this.make = make;
         this.model = model;
@@ -38,6 +41,7 @@ export class Car implements ICar{
         this.color = color;
         this.trim = trim;
         this.hidden = hidden;
+        this.description = description;
         this._id = _id;
     }
     
