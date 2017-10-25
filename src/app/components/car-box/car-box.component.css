@@ -14,10 +14,10 @@
 
 .car-box p {
     font-size: 24px;
+    color: #000000;
 }
 
 .car-box a {
-    color: #000000;
     display: inline-block;
 }
 
