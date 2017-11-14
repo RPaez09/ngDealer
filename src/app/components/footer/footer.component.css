@@ -41,3 +41,8 @@
     background-color: #24292e;
     padding-left: 9px;
 }
+
+.footer .contact-btn.codepen {
+    background-color: #191919;
+    padding-left: 8px;
+}
