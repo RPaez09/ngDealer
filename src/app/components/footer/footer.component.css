@@ -17,3 +17,22 @@
 .footer p {
     margin: 0;
 }
+
+.footer .contact-btn {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    margin-top: 15px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.footer .contact-btn:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.footer .contact-btn.fcc {
+    background-color: #006400;
+}
