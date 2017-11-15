@@ -19,8 +19,9 @@
 }
 
 .footer .contact-btn {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
     padding: 6px;
     margin-top: 15px;
     border-radius: 50%;
@@ -40,15 +41,12 @@
 
 .footer .contact-btn.gh {
     background-color: #24292e;
-    padding-left: 9px;
 }
 
 .footer .contact-btn.codepen {
     background-color: #191919;
-    padding-left: 8px;
 }
 
 .footer .contact-btn.linkedin {
     background-color: #0077b5;
-    padding-left: 8px;
 }
