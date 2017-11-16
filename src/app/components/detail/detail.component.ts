@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 import { Car } from 'app/models/Car.model';
 import { CarService } from 'app/services/car-service.service';
@@ -22,7 +22,8 @@ export class DetailComponent implements OnInit {
   constructor(
     private carService: CarService,
     private store: Store<fromCars.State>,
-    private route: ActivatedRoute ) 
+    private route: ActivatedRoute,
+    private router: Router ) 
     { 
         this.car = store.select( fromCars.selectCar );
         route.params.subscribe(params => { this.id = params['id'] });
@@ -32,7 +33,10 @@ export class DetailComponent implements OnInit {
          this.carService.getACar( this.id )
             .subscribe(
                 data => this.store.dispatch( new CarActions.GetACarSuccess( data ) ) ,
-                error => console.log(error)
+                error => {
+                  console.log(error); 
+                  this.router.navigate(['/home'])
+                }
             );
     }
 
