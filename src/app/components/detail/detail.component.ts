@@ -35,7 +35,7 @@ export class DetailComponent implements OnInit {
                 data => this.store.dispatch( new CarActions.GetACarSuccess( data ) ) ,
                 error => {
                   console.log(error); 
-                  this.router.navigate(['/home'])
+                  this.router.navigate(['/404'])
                 }
             );
     }
