@@ -37,7 +37,8 @@ const routes: Routes =
     },
   { path: 'car', redirectTo: 'home' },
   { path: 'car/:id', component: DetailComponent },
-  { path: 'home', component: HomeComponent } 
+  { path: 'home', component: HomeComponent },
+  { path: '404', component: PageNotFoundComponent }
 ];
 
 @NgModule({
