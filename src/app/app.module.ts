@@ -8,7 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { CarBoxComponent } from './components/car-box/car-box.component';
+import { CarBoxComponent } from './components/home/car-box/car-box.component';
 import { CarTableComponent } from './components/admin/car-table/car-table.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { DetailCarComponent } from './components/detail/detail-car/detail-car.component';
