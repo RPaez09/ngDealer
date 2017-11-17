@@ -16,6 +16,7 @@ import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
+import { PageNotFoundComponent } from './components/404/404.component';
 
 import { reducers } from './reducers';
 
@@ -51,7 +52,8 @@ const routes: Routes =
     EditCarFormComponent,
     FooterComponent,
     HomeComponent,
-    NewCarFormComponent
+    NewCarFormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserAnimationsModule,
