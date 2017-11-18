@@ -1,8 +1,8 @@
+import { AppRoutingModule , RoutingComponents } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
-import { RouterModule , Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
@@ -24,22 +24,6 @@ import { reducers } from './reducers';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
-const routes: Routes = 
-[  
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
-  { path: 'admin', component: AdminComponent,
-      children: [
-        { path: '', component: CarTableComponent },
-        { path: 'edit', component: EditCarFormComponent },
-        { path: 'new', component: NewCarFormComponent }
-      ] 
-    },
-  { path: 'car', redirectTo: 'home' },
-  { path: 'car/:id', component: DetailComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '404', component: PageNotFoundComponent }
-];
 
 @NgModule({
   declarations: [
@@ -54,9 +38,11 @@ const routes: Routes =
     FooterComponent,
     HomeComponent,
     NewCarFormComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RoutingComponents
   ],
   imports: [
+    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
@@ -67,7 +53,6 @@ const routes: Routes =
     MdMenuModule,
     MdToolbarModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
     StoreModule.provideStore(reducers)
   ],
   providers: [],
