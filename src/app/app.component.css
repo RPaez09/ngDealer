@@ -6,13 +6,31 @@ body {
     background-color: #eeeded;
 }
 
-.content-main {
-    margin-top: 100px;
+nav.main-nav {
+    height: 60px;
+    padding: 10px 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.navbar {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    background-color: #FFFFFF;
+nav.main-nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #000000;
+}
+
+nav.main-nav .logo:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav.main-nav .logo:focus {
+    text-decoration: none;
+}
+
+.content-main {
+    margin-top: 50px;
 }
 
  @media only screen and (max-width : 768px) {
