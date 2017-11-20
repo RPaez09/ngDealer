@@ -29,6 +29,33 @@ nav.main-nav .logo:focus {
     text-decoration: none;
 }
 
+nav.main-nav .linkbar {
+    float: right;
+}
+
+nav.main-nav .linkbar ul li {
+    display: inline-block;
+}
+
+nav.main-nav .linkbar ul li a{
+    color: #000000;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav.main-nav .linkbar ul li:first-child{
+    margin-right: 20px;
+}
+
+nav.main-nav .linkbar ul li a:hover{
+    text-decoration: none;
+}
+
+nav.main-nav .linkbar ul li a:focus{
+    text-decoration: none;
+}
+
 .content-main {
     margin-top: 50px;
 }
