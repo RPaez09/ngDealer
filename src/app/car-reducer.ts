@@ -45,6 +45,23 @@ export function reducer( state = initialState, action: CarActions.All ): State {
             return { ...state , Cars: ( state.Cars.filter( car => car._id !== action.payload._id ) )  };
         }
 
+        case CarActions.UPDATECAR: {
+            return state;
+        }
+
+        case CarActions.UPDATECARSUCCESSS: {
+
+            var index : number = state.Cars.findIndex(
+                function(car){
+                    if(car._id == action.payload._id){
+                        return true
+                    }
+                }
+            );
+
+            return { ...state , Cars: ( state.Cars.splice(index , 1 , action.payload) ) };
+        }
+
         default: { return state; }
     }
  }

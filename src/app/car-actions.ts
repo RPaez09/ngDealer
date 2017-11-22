@@ -13,6 +13,9 @@ export const DELETECARSUCCESS = "[Cars] Delete a car success";
 export const GETACAR = "[Cars] Get a car";
 export const GETACARSUCCESS = "[Cars] Get a car success";
 
+export const UPDATECAR = "[Cars] Update a car";
+export const UPDATECARSUCCESSS = "[Cars] Update a car success";
+
 export class GetACar implements Action {
     readonly type = GETACAR;
 
@@ -56,6 +59,17 @@ export class DeleteCarSuccess implements Action {
     constructor( public payload: Car ) { }
 }
 
+export class UpdateCar implements Action {
+    readonly type = UPDATECAR;
+
+    constructor( ) { }
+}
+export class UpdateCarSuccess implements Action {
+    readonly type = UPDATECARSUCCESSS;
+
+    constructor( public payload: Car ) { }
+}
+
 export type All
     = GetACar
     | GetACarSuccess
@@ -64,4 +78,6 @@ export type All
     | CreateCar
     | CreateCarSuccess
     | DeleteCar
-    | DeleteCarSuccess;
+    | DeleteCarSuccess
+    | UpdateCar
+    | UpdateCarSuccess;
