@@ -1,3 +1,4 @@
+import { Car } from 'app/models/Car.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpModule,
@@ -28,6 +29,11 @@ export class CarService {
 
   deleteCar(id: string){
     return this._http.delete('http://localhost:3000/cars/'+ id)
+      .map(res => res.json());
+  }
+
+  updateCar(car : Car){
+    return this._http.put('http://localhost:3000/cars/' + car._id , car)
       .map(res => res.json());
   }
 
