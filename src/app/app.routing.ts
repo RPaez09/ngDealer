@@ -17,7 +17,8 @@ const routes: Routes =
   { path: 'admin', component: AdminComponent,
       children: [
         { path: '', component: CarTableComponent },
-        { path: 'edit', component: EditCarFormComponent },
+        { path: 'edit', redirectTo: 'home' },
+        { path: 'edit/:id', component: EditCarFormComponent },
         { path: 'new', component: NewCarFormComponent }
       ] 
     },
