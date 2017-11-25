@@ -19,13 +19,18 @@ import 'rxjs/add/operator/map';
 export class EditCarFormComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'col-md-12';
 
-  id: string;
   car: Observable<Car>;
-
+  
+  id: string;
   editCarForm: FormGroup;
   make: AbstractControl;
   model: AbstractControl;
   year: AbstractControl;
+  price: AbstractControl;
+  mileage: AbstractControl;
+  color: AbstractControl;
+  trim: AbstractControl;
+  description:AbstractControl;
 
   constructor(
     fb: FormBuilder,
@@ -38,14 +43,24 @@ export class EditCarFormComponent implements OnInit {
     this.editCarForm = fb.group({
       'make' : ['', Validators.required ],
       'model' : ['', Validators.required ],
-      'year' : ['', Validators.required ]
+      'year' : ['', Validators.required ],
+      'price' : ['', Validators.required ],
+      'mileage' : ['', Validators.required ],
+      'color' : ['', Validators.required ],
+      'trim' : ['', Validators.required ],
+      'description' : ['']
     });
 
     this.make = this.editCarForm.controls['make'];
     this.model = this.editCarForm.controls['model'];
     this.year = this.editCarForm.controls['year'];
+    this.price = this.editCarForm.controls['price'];
+    this.mileage = this.editCarForm.controls['mileage'];
+    this.color = this.editCarForm.controls['color'];
+    this.trim = this.editCarForm.controls['trim'];
+    this.description = this.editCarForm.controls['description'];
 
-    //Fetching car info
+    //Fetching car info 
     this.car = store.select( fromCars.selectCar );
 
     route.params.subscribe(params => { this.id = params['id'] });
@@ -59,6 +74,12 @@ export class EditCarFormComponent implements OnInit {
           this.make.setValue(data.make);
           this.model.setValue(data.model);
           this.year.setValue(data.year);
+          this.price.setValue(data.price);
+          this.mileage.setValue(data.mileage);
+          this.color.setValue(data.color);
+          this.trim.setValue(data.trim);
+          this.description.setValue(data.description);
+          
           console.log(data);
         },
         error => {
