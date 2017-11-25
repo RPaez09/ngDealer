@@ -3,30 +3,30 @@
   <form [formGroup]="editCarForm" (ngSubmit)="onSubmit(editCarForm.value)">
     <div class="form-group">
       <input  type="text" 
-              [formControl]="editCarForm.controls['make']"
-              class="form-control"
-              id="makeInput"
-              placeholder="Make"
-              name="make" 
-              ngModel>
+      [formControl]="editCarForm.controls['make']"
+      class="form-control"
+      id="makeInput"
+      placeholder="Make"
+      name="make" 
+      ngModel>
       <div class="error-lbl" *ngIf="!make.valid && make.touched">Vehicle make is required</div>
 
       <input  type="text" 
-              [formControl]="editCarForm.controls['model']"
-              class="form-control"
-              id="modelInput"
-              placeholder="Model"
-              name="model" 
-              ngModel>
+      [formControl]="editCarForm.controls['model']"
+      class="form-control"
+      id="modelInput"
+      placeholder="Model"
+      name="model" 
+      ngModel>
       <div class="error-lbl" *ngIf="!model.valid&& model.touched">Vehicle model is required</div>
 
       <input  type="text" 
-              [formControl]="editCarForm.controls['year']"
-              class="form-control"
-              id="yearInput"
-              placeholder="Year"
-              name="year" 
-              ngModel>
+      [formControl]="editCarForm.controls['year']"
+      class="form-control"
+      id="yearInput"
+      placeholder="Year"
+      name="year" 
+      ngModel>
       <div class="error-lbl" *ngIf="!year.valid && year.touched">A vehicle year is required</div>
 
       <input  type="text" 
