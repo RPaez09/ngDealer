@@ -34,7 +34,7 @@ export class EditCarFormComponent implements OnInit {
 
   constructor(
     fb: FormBuilder,
-    private carServive: CarService,
+    private carService: CarService,
     private store: Store<fromCars.State>,
     private route: ActivatedRoute,
     private router: Router )
@@ -67,7 +67,7 @@ export class EditCarFormComponent implements OnInit {
 
     this.store.dispatch( new CarActions.GetACar() );
 
-    this.carServive.getACar( this.id )
+    this.carService.getACar( this.id )
       .subscribe(
         data => {
           this.store.dispatch( new CarActions.GetACarSuccess( data ) ) 
@@ -79,7 +79,7 @@ export class EditCarFormComponent implements OnInit {
           this.color.setValue(data.color);
           this.trim.setValue(data.trim);
           this.description.setValue(data.description);
-          
+
           console.log(data);
         },
         error => {
@@ -93,7 +93,38 @@ export class EditCarFormComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    
+    if( this.editCarForm.valid ){
+      let editedCar = {
+        _id: this.id,
+        make: form.make,
+        model: form.model,
+        year: form.year,
+        price: form.price,
+        mileage: form.mileage,
+        color: form.color,
+        trim: form.trim,
+        description: form.description,
+        hidden: false
+      };
+
+      this.store.dispatch( new CarActions.UpdateCar() );
+
+      this.carService.updateCar(editedCar)
+        .subscribe(
+          data => { 
+            this.store.dispatch( new CarActions.UpdateCarSuccess(data) );
+            alert("Car updated succesfully!");
+            this.router.navigate(["/admin"]);
+          },
+          error => {
+            console.log(error);
+            alert("Error! Check your console");
+          }
+        );
+    }
+    else {
+      alert("Invalid form: Please check your form values");
+    }
   }
 
 }
