@@ -17,6 +17,7 @@
           <td>{{car.make}}</td>
           <td>{{car.model}}</td>
           <td>{{car._id}}</td>
+          <td><a [routerLink]="['/admin/edit/' + car._id]"><button class="btn btn-success add-btn">Edit</button></a></td>
           <td><button (click)="deleteCar(car._id)" class="btn btn-danger delete-btn">Delete</button></td>
         </tr>
       </tbody>
