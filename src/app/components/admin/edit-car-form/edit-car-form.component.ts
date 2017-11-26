@@ -79,8 +79,6 @@ export class EditCarFormComponent implements OnInit {
           this.color.setValue(data.color);
           this.trim.setValue(data.trim);
           this.description.setValue(data.description);
-
-          console.log(data);
         },
         error => {
           console.log( error );
