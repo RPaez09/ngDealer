@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { CarService } from "app/services/car-service.service";
@@ -27,7 +28,8 @@ export class NewCarFormComponent implements OnInit {
   constructor(
     fb: FormBuilder, 
     private carService: CarService,
-    private store: Store<fromCars.State> )
+    private store: Store<fromCars.State>,
+    private router: Router )
     {
 
     this.newCarForm = fb.group({
@@ -69,7 +71,11 @@ export class NewCarFormComponent implements OnInit {
 
       this.carService.addCar(newCar)
         .subscribe(
-          data => this.store.dispatch( new CarActions.CreateCarSuccess(data) ),
+          data => {
+            this.store.dispatch( new CarActions.CreateCarSuccess(data) );
+            alert("Car has been succesfully added");
+            this.router.navigate(['/admin']);
+          },
           error => console.log(error) );
       
       this.newCarForm.reset();
