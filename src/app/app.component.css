@@ -63,7 +63,7 @@ nav.main-nav .linkbar ul li a:focus{
  @media only screen and (max-width : 768px) {
 
     .content-main {
-        margin-top: 150px;
+        margin-top: 0;
     }
 
 }
