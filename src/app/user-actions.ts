@@ -46,7 +46,7 @@ export class SignIn implements Action {
 export class SignInSuccess implements Action {
     readonly type = SIGNINSUCCESS;
 
-    constructor( public payload: Object ){ }
+    constructor( public payload: { user : User , token : string } ){ }
 }
 
 export class SignOut implements Action {
