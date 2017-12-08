@@ -4,7 +4,7 @@ import { User } from 'app/models/user.model';
 export const GETAUSER = "[Users] Get a user";
 export const GETAUSERSUCCESS = "[Users] Get a user success";
 
-export const CREATAEUSER = "[Users] Create a user";
+export const CREATEAEUSER = "[Users] Create a user";
 export const CREATEAUSERSUCCESS = "[Users] Create a user success";
 
 export const SIGNIN = "[Users] Sign in a user";
@@ -26,7 +26,7 @@ export class GetAUserSuccess implements Action {
 }
 
 export class CreateAUser implements Action {
-    readonly type = CREATAEUSER;
+    readonly type = CREATEAEUSER;
 
     constructor( ){ }
 }
@@ -46,7 +46,7 @@ export class SignIn implements Action {
 export class SignInSuccess implements Action {
     readonly type = SIGNINSUCCESS;
 
-    constructor( public payload: User ){ }
+    constructor( public payload: Object ){ }
 }
 
 export class SignOut implements Action {
