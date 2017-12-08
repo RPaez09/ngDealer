@@ -3,13 +3,13 @@ import * as UserActions from 'app/user-actions';
 
 export interface State {
     currentUser : User,
-    detailedUser : User ,
+    detailUser : User ,
     token : String
 }
 
-const initialState: State {
+const initialState: State = {
     currentUser: null,
-    detailedUser: null,
+    detailUser: null,
     token : null
 }
 
@@ -21,7 +21,7 @@ export function reducer( state = initialState, action: UserActions.All ): State 
         }
 
         case UserActions.GETAUSERSUCCESS: {
-            return { ...state , detailedUser: action.payload };
+            return { ...state , detailUser: action.payload };
         }
 
         case UserActions.CREATEAEUSER: {
