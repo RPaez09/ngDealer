@@ -4,10 +4,15 @@
 
 body {
     background-color: #eeeded;
+    padding-top: 50px;
 }
 
 nav.main-nav {
+    position: fixed;
+    top: 0;
     height: 60px;
+    z-index: 9999;
+    width: 100%;
     background-color: #FFFFFF;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
