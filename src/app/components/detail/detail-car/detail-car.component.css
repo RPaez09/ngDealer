@@ -52,3 +52,7 @@ span.price {
     background-color: grey;
     margin: 15px 35px;
 }
+
+@media only screen and (max-width : 768px) {
+    
+}
