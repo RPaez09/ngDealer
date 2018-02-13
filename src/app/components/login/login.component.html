@@ -1,0 +1,25 @@
+<div class="login-form">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <input type="text"
+            [formControl]="loginForm.controls['username']"
+            class="form-control"
+            id="usernameInput"
+            placeholder="Username"
+            name="username"
+            ngModel>
+            <div class="error-lbl" *ngIf="!username.valid && username.touched">A username is required</div>
+
+            <input type="password"
+            [formControl]="loginForm.controls['password']"
+            class="form-control"
+            id="passwordInput"
+            placeholder="Password"
+            name="password"
+            ngModel>
+            <div class="error-lbl" *ngIf="!password.valid && password.touched">Password is required</div>
+            
+        </div>
+    </form>
+</div>
