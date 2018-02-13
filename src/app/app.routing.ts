@@ -9,6 +9,7 @@ import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-
 import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 import { PageNotFoundComponent } from './components/404/404.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = 
 [  
@@ -25,6 +26,7 @@ const routes: Routes =
   { path: 'car', redirectTo: 'home' },
   { path: 'car/:id', component: DetailComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: '404', component: PageNotFoundComponent }
 ];
 
