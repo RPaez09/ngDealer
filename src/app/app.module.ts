@@ -23,8 +23,6 @@ import { reducers } from './reducers';
 
 //Material dependencies
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-
 
 @NgModule({
   declarations: [
@@ -41,7 +39,8 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
     LoginComponent,
     NewCarFormComponent,
     PageNotFoundComponent,
-    RoutingComponents
+    RoutingComponents,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
@@ -49,11 +48,6 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdButtonModule,
-    MdCardModule,
-    MdIconModule,
-    MdMenuModule,
-    MdToolbarModule,
     ReactiveFormsModule,
     StoreModule.provideStore(reducers)
   ],

@@ -9,7 +9,7 @@ import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-
 import { HomeComponent } from './components/home/home.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 import { PageNotFoundComponent } from './components/404/404.component';
-import { LoginComponent } from 'app/components/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = 
 [  
