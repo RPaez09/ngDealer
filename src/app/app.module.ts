@@ -16,6 +16,7 @@ import { EditCarFormComponent } from './components/admin/edit-car-form/edit-car-
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { NewCarFormComponent } from './components/admin/new-car-form/new-car-form.component';
 import { PageNotFoundComponent } from './components/404/404.component';
 
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    NavbarComponent,
     NewCarFormComponent,
     PageNotFoundComponent,
     RoutingComponents,

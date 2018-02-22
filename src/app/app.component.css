@@ -6,7 +6,7 @@ body {
     padding-top: 50px;
 }
 
-nav.main-nav {
+.main-nav {
     position: fixed;
     top: 0;
     height: 60px;
@@ -16,7 +16,7 @@ nav.main-nav {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-nav.main-nav .logo span {
+.main-nav .logo span {
     font-size: 20px;
     font-weight: bold;
     color: #000000;
@@ -26,24 +26,24 @@ nav.main-nav .logo span {
     display: inline-block;
 }
 
-nav.main-nav .logo:hover {
+.main-nav .logo:hover {
     color: #000000;
     text-decoration: none;
 }
 
-nav.main-nav .logo:focus {
+.main-nav .logo:focus {
     text-decoration: none;
 }
 
-nav.main-nav .linkbar {
+.main-nav .linkbar {
     float: right;
 }
 
-nav.main-nav .linkbar ul a li {
+.main-nav .linkbar ul a li {
     display: inline-block;
 }
 
-nav.main-nav .linkbar ul a li {
+.main-nav .linkbar ul a li {
     color: #000000;
     line-height: 40px;
     font-size: 18px;
@@ -52,15 +52,15 @@ nav.main-nav .linkbar ul a li {
     line-height: 60px;
 }
 
-nav.main-nav .linkbar ul li:first-child{
+.main-nav .linkbar ul li:first-child{
     margin-right: 20px;
 }
 
-nav.main-nav .linkbar ul a:hover{
+.main-nav .linkbar ul a:hover{
     text-decoration: none;
 }
 
-nav.main-nav .linkbar ul a:focus{
+.main-nav .linkbar ul a:focus{
     text-decoration: none;
 }
 
