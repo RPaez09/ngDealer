@@ -13,7 +13,6 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'login-form',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css'],
     providers: [UserService]
 })
 export class LoginComponent implements OnInit {
