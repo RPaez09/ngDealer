@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { User } from 'app/models/User.model';
-import { UserService } from 'app/services/user-service';
+import { UserService } from 'app/services/user-service.service';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 
@@ -43,4 +43,29 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {}
+
+    onSubmit( form: any ){
+        if( this.loginForm.valid ){
+            let newUser = {
+                username: form.username,
+                password: form.password
+            }
+
+            this.store.dispatch( new UserActions.SignIn() );
+
+            this.userService.SignIn( newUser )
+                .subscribe(
+                    data => {
+                        this.store.dispatch( new UserActions.SignInSuccess(data) );
+                        alert("You've succesfully signed in!");
+                        this.router.navigate(['/home']);
+                    },
+                    error => console.log(error) );
+
+            this.loginForm.reset();
+
+        } else {
+            alert("Please check your form");
+        }
+    }
 }
